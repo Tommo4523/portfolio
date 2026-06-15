@@ -14,105 +14,169 @@
             <a class="home-button" href="home.html">Tom Russell - Portfolio</a>
             <nav>
                 <a href="home.html">Home</a>
-                <a href="about.html">About</a>
-                <a href="projects.html">Projects</a>
+                <div class="nav-dropdown">
+                    <button type="button">Projects</button>
+                    <div class="dropdown-menu">
+                        <a href="liquid_engine.html">Liquid Rocket Engine</a>
+                        <a href="solaris_mkII.html">Solaris MKII</a>
+                        <a href="solaris_mkIII.html">Solaris MKIII</a>
+                        <a href="hydrogen_jet_facility.html">Hydrogen Jet Facility</a>
+                        <a href="nitrous_oxide_fill_station.html">Nitrous Oxide Fill Station</a>
+                        <a href="nozzle_summer_research.html">Nozzle Summer Research</a>
+                    </div>
+                </div>
                 <a href="Thomas%20Russell%20-%20Resume%202026.pdf" target="_blank">Resume</a>
             </nav>
         </div>
         <div class="hero-banner">
             <div class="hero-media">
-                <img src="photos/hydrogen_jet_facility/supply_fluids_panel.jpeg" alt="Hydrogen facility supply panel">
+                    <img src="photos/hydrogen_jet_facility/supply_fluids_panel.jpeg" alt="Hydrogen facility supply panel">
+                </div>
+                <div class="hero-copy hero-copy--banner">
+                    <p class="eyebrow">Overview</p>
+                    <h2>Hydrogen Jet Test Facility</h2>
+                    <p>Final-year research project investigating acoustic detection of high-pressure hydrogen leaks. Designing, building and commissioning a safe, remotely operated hydrogen jet facility in the Monash Shock Lab.</p>
+                </div>
             </div>
-            <div class="hero-copy hero-copy--banner">
-                <p class="eyebrow">Overview</p>
-                <h2>Building a hydrogen jet test facility for high-speed experimental flow studies.</h2>
-                <p>This project combines safe hydrogen handling with acoustic leak research, supersonic jet delivery and diagnostic readiness for experimental validation.</p>
-            </div>
-        </div>
     </header>
     <main>
         <section class="section">
-            <h2>Role</h2>
+            <h2>Scope</h2>
             <ul class="highlight-list">
-                <li>Designing pressure systems, hydrogen safety controls and test cell interfaces for experimental operation.</li>
-                <li>Coordinating instrumentation, flow metering and data acquisition for high-speed diagnostics.</li>
-                <li>Delivering a modular test facility architecture to support iterative study campaigns.</li>
+                <li>Since hydrogen leaks act as choked free jets, they are anticipated to produce distinct jet screech tones with spectral classifications different from air. Acoustic detection could reduce reliance on slow, localised particle detectors.</li>
+                <li>Complete a feasibility study on the safety of creating a hydrogen jet facility at Monash, compliant with AS/NZS IEC 60079.10.1.</li>
+                <li>Design and build a safe, remotely operated hydrogen jet facility in the Monash Shock Lab with integrated e-stop, nitrogen purge and local extraction systems.</li>
+                <li>Commission the facility and take first measurements of a hydrogen jet with high-speed schlieren and acoustic microphones. Analyse the data using SPOD and PSD to characterise hydrogen screech tones.</li>
             </ul>
         </section>
         <section class="section">
-            <h2>Technical focus</h2>
+            <h2>Key Characteristics</h2>
             <div class="metric-grid">
                 <div class="metric-card">
-                    <h3>Hydrogen handling</h3>
-                    <p>Safe delivery and containment systems for hydrogen feed and combustion test conditions.</p>
+                    <h3>Acoustic leak detection</h3>
+                    <p>Investigating whether hydrogen leaks can be detected acoustically via jet screech tones before standard particle detectors register them, potentially reducing cost and response time across large hydrogen farms.</p>
                 </div>
                 <div class="metric-card">
-                    <h3>Test rig design</h3>
-                    <p>Supersonic jet delivery, nozzle mounting and boundary control for experimental repeatability.</p>
+                    <h3>Safety classification</h3>
+                    <p>Per AS/NZS IEC 60079.10.1, the facility will be classified Zone 1 NE (negligible extent), effectively non-hazardous during operation, with a self-imposed factor of safety of 4 on the lower explosive limit.</p>
                 </div>
                 <div class="metric-card">
-                    <h3>Diagnostics</h3>
-                    <p>Instrumentation planning and sensor integration for flow, pressure and temperature measurement.</p>
+                    <h3>Jet sizing</h3>
+                    <p>Nozzle limited to 3.5 mm diameter to maintain safe extraction at 19 m/s across pressure ratios up to 6, yielding 43.8 L/s hydrogen volumetric flow at NPR 6 with a 1.25 FoS on mass flow.</p>
                 </div>
+            </div>
+            <div class="full-image-card">
+                <img src="photos/hydrogen_jet_facility/zone_specs.png" alt="Facility zone specifications">
+                <h3>Zone planning</h3>
+                <p>Test cell zone map showing separation barriers, restricted access areas and safety buffer distances.</p>
             </div>
         </section>
         <section class="section">
-            <h2>Process & visuals</h2>
+            <h2>Design Overview</h2>
+            <h3>Problem and motivation</h3>
+            <ul class="highlight-list">
+                <li>Global hydrogen market expected to reach US$1.4 trillion by 2050, demanding large-scale farms with cost-effective, instantaneous leak monitoring.</li>
+                <li>Traditional particle detectors are slow (require dispersion before detection), localised, and expensive. Acoustic detection could detect leaks at the speed of sound with range limited only by microphone sensitivity.</li>
+                <li>Hydrogen is stored at 100-300 bar or as sub-cooled cryogenic liquid, therefore all leaks act as choked free jets which should produce distinct screech tones via an aeroacoustic feedback loop.</li>
+                <li>These spectral signatures are expected to be different from air and characterisable with lab equipment.</li>
+            </ul>
+            <h3>Regulatory compliance and safety</h3>
+            <ul class="highlight-list">
+                <li>Governed by AS/NZS IEC 60079.10.1 (Explosive atmospheres) and WorkSafe Victoria regulations.</li>
+                <li>Hydrogen LEL is 4% by volume, self-imposed cumulative FoS of 4 gives max allowable concentration of 1% by volume in the lab.</li>
+                <li>Jet classified as "primary" release grade with Type B opening; Shock Lab ventilation provides 19 m/s extraction, rated "high" dilution for release rates under 1500 L/s.</li>
+                <li>Result: Zone 1 NE (negligible extent), effectively non-hazardous, no ex-rated equipment needed.</li>
+                <li>Atmospheric hydrogen detectors placed throughout the facility as redundancy, set to alarm at 25% of LEL.</li>
+            </ul>
+            <div class="full-image-card">
+                <img src="photos/hydrogen_jet_facility/dilution_graph.png" alt="Hydrogen dilution analysis">
+                <h3>Dilution analysis</h3>
+                <p>AS/NZS IEC 60079.10.1 dilution chart showing high dilution grade for various extraction velocities and characteristic flowrates.</p>
+            </div>
+            <h3>Fluid system design</h3>
+            <ul class="highlight-list">
+                <li>Gas feed system uses strict remotely controlled order of operations to isolate personnel from the test cell during hydrogen flow.</li>
+                <li>E-stop routed to operator's control station that initiates an automated abort that isolates H2 supply, cuts power to NO and NC pneumatic valves to dump line pressure into safe extraction, triggers N2 purge.</li>
+                <li>Nitrogen purge runs before H2 flow, during e-stop, and after each test to ensure no combustible mixtures remain in feed lines.</li>
+                <li>All components are Swagelok for minimum leaks, maximum compatibility and high reliability.</li>
+            </ul>
             <div class="card-grid">
                 <div class="project-card">
-                    <img src="photos/hydrogen_jet_facility/supply_fluids_panel.jpeg" alt="Hydrogen supply fluids panel">
-                    <h3>Plan</h3>
-                    <p>Mapped hydrogen supply flow, leak detection points and jet delivery geometry to support safe testing.</p>
+                    <img src="photos/hydrogen_jet_facility/p&id.png" alt="Process and instrumentation diagram">
+                    <h3>P&amp;ID design</h3>
+                    <p>Process and instrumentation diagram showing the hydrogen feed, vent and purge layout.</p>
                 </div>
                 <div class="project-card">
-                    <div class="image-placeholder">Acoustic leak study</div>
-                    <h3>Research</h3>
-                    <p>Investigated acoustic detection methods for hydrogen leaks to improve early warning on large storage systems.</p>
-                </div>
-                <div class="project-card">
-                    <div class="image-placeholder">Safety & commissioning</div>
-                    <h3>Validate</h3>
-                    <p>Prepared safety protocols, instrumentation and commissioning checks for hydrogen test operation.</p>
+                    <img src="photos/hydrogen_jet_facility/supply_fluids_panel.jpeg" alt="Supply fluids panel">
+                    <h3>Supply panel</h3>
+                    <p>Hydrogen supply and fluids control panel integrating pressure regulation, flow metering and isolation valves.</p>
                 </div>
             </div>
-        </section>
-        <section class="section">
-            <h2>Media gallery</h2>
-            <div class="media-gallery">
-                <figure>
-                    <img src="photos/hydrogen_jet_facility/supply_fluids_panel.jpeg" alt="Hydrogen jet facility control panel">
-                    <figcaption>Hydrogen supply and fluids control panel used for the experimental facility.</figcaption>
-                </figure>
-            </div>
-        </section>
-        <section class="section">
-            <h2>Project story</h2>
-            <div class="metric-grid">
-                <div class="metric-card">
-                    <h3>Understand</h3>
-                    <p>Defined hydrogen leak risks and why acoustic detection can reduce reliance on particle-based leak detectors.</p>
-                </div>
-                <div class="metric-card">
-                    <h3>Design</h3>
-                    <p>Built the test facility around hydrogen feed, diagnostics and a modular test cell for supersonic jet research.</p>
-                </div>
-                <div class="metric-card">
-                    <h3>Prepare</h3>
-                    <p>Developed commissioning and safety checks to support both experimental use and future operational handover.</p>
-                </div>
-            </div>
-        </section>
-        <section class="section">
-            <h2>Current status</h2>
+            <h3>Jet sizing and thermodynamics</h3>
             <ul class="highlight-list">
-                <li>System architecture is defined and the facility layout is under detailed design review.</li>
-                <li>Safety protocols and valve control strategies are being validated for hydrogen operation.</li>
-                <li>Experimental instrumentation and commissioning plans are advancing in parallel.</li>
+                <li>Converging nozzle sized using isentropic flow equations; 1.25 FoS on mass flow gives max nozzle diameter of 3.5 mm.</li>
+                <li>At NPR 6, hydrogen volumetric flow rate is 43.8 L/s, with LEL factor this is below the extraction system's 1500 L/s ceiling.</li>
+                <li>Thermodynamic modelling accounts for substantial cooling of H2 as it expands through the nozzle, rapid temperature drop increases local gas density, altering real mass flow rate and acoustic signature versus room-temperature assumptions.</li>
+            </ul>
+            <h3>Measurement methodology</h3>
+            <ul class="highlight-list">
+                <li>High-speed schlieren imaging (up to 500 kHz) and acoustic microphones used for measurement.</li>
+                <li>Acoustic phenomena of interest expected at Strouhal 0-0.2 for H2 based on LES from literature, equipment allows measurements up to Strouhal 1.46.</li>
+                <li>Minimum Strouhal 1 resolved to capture any potential screech tones, matching maximum expected for air.</li>
+                <li>First tests with inert nitrogen to eliminate flammability risk during commissioning.</li>
+                <li>Data analysis using SPOD and PSD to locate screech tones and characterise acoustic spectra.</li>
+            </ul>
+            <div class="full-image-card">
+                <img src="photos/hydrogen_jet_facility/schilieren_setup.jpg" alt="Schlieren setup">
+                <h3>Schlieren imaging</h3>
+                <p>High-speed schlieren setup for visualising shock cell structure.</p>
+            </div>
+        </section>
+        <section class="section">
+            <h2>Literature review and predictions</h2>
+            <ul class="highlight-list">
+                <li>Jet screech produced by an aeroacoustic feedback loop, downstream turbulence interacts with shock cells, generating upstream acoustic waves that cause a feedback loop [2]. Well characterised for air but largely unexplored for hydrogen.</li>
+                <li>LES of highly under-expanded H2 jets (Haseeb Ali et al. [5]) predict screech at Strouhal 0-0.2, significantly lower than air (up to ~1).</li>
+                <li>Choked flow ensures constant exhaust velocity regardless of pressure ratio for converging nozzles, frequency becomes the primary Strouhal variable for a given nozzle diameter.</li>
+                <li>At 3.5 mm nozzle and NPR 6, Strouhal 0.2 corresponds to ~75 kHz, within microphone and schlieren range.</li>
+                <li>SPOD will isolate coherent flow structures, PSD will identify dominant frequency peaks and validate LES predictions against experiment.</li>
+            </ul>
+            <div class="card-grid">
+                <div class="project-card">
+                    <img src="photos/hydrogen_jet_facility/jet_screech.png" alt="Jet screech feedback loop">
+                    <h3>Screech mechanism</h3>
+                    <p>Schematic of the aeroacoustic feedback loop showing how downstream turbulence interacts with shock cells, generating upstream acoustic waves that excite new disturbances at the nozzle lip.</p>
+                </div>
+                <div class="project-card">
+                    <img src="photos/hydrogen_jet_facility/st_vs_npr_250khz.png" alt="Strouhal vs NPR">
+                    <h3>Strouhal predictions</h3>
+                    <p>Predicted Strouhal number against nozzle pressure ratio for various jet diameters, at 250 kHz measurements.</p>
+                </div>
+            </div><br>
+            <ul class="highlight-list">
+                <li><strong>[2] Edgington-Mitchell et al., "A unifying theory of jet screech," Journal of Fluid Mechanics, vol. 945, 2022.</strong> Establishes the aeroacoustic feedback loop model for screech generation in supersonic jets.</li>
+                <li><strong>[5] Haseeb Ali et al., "Large-Eddy simulation of highly under-expanded hydrogen jets using a low dissipative solver," International Journal of Hydrogen Energy, 2025.</strong> LES predictions of hydrogen screech Strouhal numbers in the 0-0.2 range.</li>
+            </ul>
+        </section>
+        <section class="section">
+            <h2>Commissioning and testing</h2>
+            <ul class="highlight-list">
+                <li>Assemble all fluid panels, leak test individual sections, then complete assembly leak test with inert N2.</li>
+                <li>Full actuation tests confirm controller, e-stop and purge functions work as intended.</li>
+                <li>Project at late feed system design stage, purchasing scheduled end of semester, followed by jet design and manufacturing.</li>
+                <li>After commissioning and H2 testing, data will be analysed with SPOD and PSD to characterise screech tones and determine viability of acoustic leak detection for the hydrogen industry.</li>
+            </ul>
+        </section>
+        <section class="section">
+            <h2>Technical documents</h2>
+            <ul class="highlight-list">
+                <li><a href="photos/hydrogen_jet_facility/FYP_paper.pdf" target="_blank">FYP paper: Characterising the Acoustic Properties of Hydrogen Leaks</a></li>
+                <li><a href="photos/hydrogen_jet_facility/Safety_Review.pdf" target="_blank">Safety review: Hazard classification, dilution analysis and operating procedures</a></li>
             </ul>
         </section>
     </main>
     <footer>
-        <p>&copy; 2026 Tom Russell • Aerospace Engineering Portfolio</p>
+        <p>2026 Tom Russell • Aerospace Engineering Portfolio</p>
     </footer>
 </body>
 </html>

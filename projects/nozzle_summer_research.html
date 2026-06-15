@@ -14,117 +14,187 @@
             <a class="home-button" href="home.html">Tom Russell - Portfolio</a>
             <nav>
                 <a href="home.html">Home</a>
-                <a href="about.html">About</a>
-                <a href="projects.html">Projects</a>
+                <div class="nav-dropdown">
+                    <button type="button">Projects</button>
+                    <div class="dropdown-menu">
+                        <a href="liquid_engine.html">Liquid Rocket Engine</a>
+                        <a href="solaris_mkII.html">Solaris MKII</a>
+                        <a href="solaris_mkIII.html">Solaris MKIII</a>
+                        <a href="hydrogen_jet_facility.html">Hydrogen Jet Facility</a>
+                        <a href="nitrous_oxide_fill_station.html">Nitrous Oxide Fill Station</a>
+                        <a href="nozzle_summer_research.html">Nozzle Summer Research</a>
+                    </div>
+                </div>
                 <a href="Thomas%20Russell%20-%20Resume%202026.pdf" target="_blank">Resume</a>
             </nav>
         </div>
         <div class="hero-banner hero-banner--rotate">
-            <div class="hero-media hero-media--rotated">
-                <video class="rotated-media" autoplay muted loop playsinline poster="photos/nozzle_summer_research/nozzle.jpg" src="photos/nozzle_summer_research/schlieren_imaging.mp4"></video>
+            <div class="hero-media">
+                    <video autoplay muted loop playsinline class="rotated-media">
+                        <source src="photos/nozzle_summer_research/schlieren_imaging.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="hero-copy hero-copy--banner">
+                    <p class="eyebrow">Overview</p>
+                    <h2>Nozzle Summer Research</h2>
+                    <p>Summer research project in the Monash Shock Lab. Built a glass-walled planar nozzle to investigate free shock separation and restricted shock separation in overexpanded nozzle flow using high-speed schlieren and SPOD.</p>
+                </div>
             </div>
-            <div class="hero-copy hero-copy--banner">
-                <p class="eyebrow">Overview</p>
-                <h2>Exploring nozzle cooling and performance through summer research testing.</h2>
-                <p>This work creates a glass-walled planar nozzle, uses schlieren imaging to investigate FSS and RSS, and performs SPOD analysis to explore feedback mechanisms in overexpanded flow.</p>
-            </div>
-        </div>
     </header>
     <main>
         <section class="section">
-            <h2>Role</h2>
+            <h2>Scope</h2>
             <ul class="highlight-list">
-                <li>Developing experimental methods for nozzle heat transfer and performance measurements.</li>
-                <li>Designing test articles, cooling approaches and instrumentation for combustion evaluation.</li>
-                <li>Analyzing results to inform future nozzle design and propulsion system improvements.</li>
+                <li>Design and build a glass-walled planar nozzle for optical access, with contour based on an axisymmetric TOP nozzle (area ratio 2.45, throat width 15 mm).</li>
+                <li>Image the flow with high speed schlieren to investigate free shock separation and restricted shock separation across NPR 2.0-6.0.</li>
+                <li>Apply Spectral Proper Orthogonal Decomposition (SPOD) to schlieren sequences to identify coherent structures, feedback mechanisms and acoustic modes causing the phenomenon.</li>
+                <li>Compare experimental observations with CFD predictions and prior literature to better understand the underlying mechanism of FSS/RSS side loadings.</li>
             </ul>
         </section>
         <section class="section">
-            <h2>Technical focus</h2>
+            <h2>Key Characteristics</h2>
             <div class="metric-grid">
                 <div class="metric-card">
-                    <h3>Thermal analysis</h3>
-                    <p>Examining cooling strategies and temperature distribution under representative flow conditions.</p>
+                    <h3>FSS and RSS</h3>
+                    <p>FSS occurs in all nozzle types (conical, TIC, TOP, TOC). RSS only occurs in TOC and TOP nozzles, characterised by an internal shock meeting the triple point. Both cause unwanted side loadings from azimuthal modes of a resonant feedback loop.</p>
                 </div>
                 <div class="metric-card">
-                    <h3>Nozzle performance</h3>
-                    <p>Measuring thrust, expansion behaviour and flow efficiency for experimental glass-planar nozzle geometries.</p>
+                    <h3>Planar nozzle</h3>
+                    <p>15 mm throat, area ratio 2.45, based on axisymmetric TOP Nozzle (AR 6 at 80% length). Glass walls provide full optical access for schlieren visualisation of the shock structure and separation points.</p>
                 </div>
                 <div class="metric-card">
-                    <h3>Experimental validation</h3>
-                    <p>Using schlieren imaging and SPOD to compare flow physics with analytical and CFD predictions.</p>
-                </div>
+                    <h3>Schlieren and SPOD</h3>
+                    <p>Schlieren at up to 150k FPS with 125 mm and 300 mm focal lengths. SPOD analysis reveals feedback mechanisms, screech tones and modal energy distribution across the flow field.</p>
+                </div><br>
             </div>
-        </section>
-        <section class="section">
-            <h2>Process & visuals</h2>
             <div class="card-grid">
                 <div class="project-card">
-                    <img src="photos/nozzle_summer_research/nozzle.jpg" alt="Nozzle test article">
-                    <h3>Investigate</h3>
-                    <p>Examined glass-walled planar nozzle geometry and cooling concepts before building the test apparatus.</p>
+                    <img src="photos/nozzle_summer_research/nozzle_cfd.png" alt="CFD analysis of nozzle flow">
+                    <h3>CFD modelling</h3>
+                    <p>CFD results comparing expected flow separation and expansion behaviour across the operating range for the planar nozzle contour going from free jet to FSS.</p>
                 </div>
                 <div class="project-card">
-                    <img src="photos/nozzle_summer_research/nozzle_cfd.png" alt="CFD analysis of nozzle flow">
-                    <h3>Experiment</h3>
-                    <p>Built test articles and used schlieren imaging to investigate FSS/RSS and flow behaviour.</p>
-                </div>
-                <div class="project-card">
-                    <img src="photos/nozzle_summer_research/SPOD_modes.png" alt="SPOD mode analysis">
-                    <h3>Analyze</h3>
-                    <p>Performed SPOD analysis to identify feedback mechanisms and underlying aerodynamic modes.</p>
+                    <img src="photos/nozzle_summer_research/npr_6_mean_schlieren.png" alt="Mean schlieren imaging">
+                    <h3>Schlieren imaging</h3>
+                    <p>Mean schlieren visualisation used to validate the flow structure and separation points at NPR 6 against CFD predictions.</p>
                 </div>
             </div>
         </section>
         <section class="section">
-            <h2>Media gallery</h2>
-            <div class="media-gallery">
-                <figure>
-                    <img src="photos/nozzle_summer_research/nozzle.jpg" alt="Nozzle test article">
-                    <figcaption>Glass-walled planar nozzle test article used for flow visualisation.</figcaption>
-                </figure>
-                <figure>
-                    <img src="photos/nozzle_summer_research/nozzle_cfd.png" alt="CFD analysis of nozzle flow">
-                    <figcaption>CFD results comparing expected flow separation and expansion behaviour.</figcaption>
-                </figure>
-                <figure>
-                    <img src="photos/nozzle_summer_research/SPOD_modes.png" alt="SPOD mode analysis">
-                    <figcaption>SPOD mode analysis revealing feedback structures in the nozzle flow.</figcaption>
-                </figure>
-                <figure>
-                    <video class="project-video" controls src="photos/nozzle_summer_research/schlieren_imaging.mp4"></video>
-                    <figcaption>Schlieren imaging video capturing flow features during the experiment.</figcaption>
-                </figure>
-            </div>
-        </section>
-        <section class="section">
-            <h2>Project story</h2>
-            <div class="metric-grid">
-                <div class="metric-card">
-                    <h3>Scope</h3>
-                    <p>Created a glass planform nozzle to investigate flow separation and feedback in overexpanded conditions.</p>
+            <div class="subsection-grid">
+                <div class="subsection-text">
+                    <h2>Design Overview</h2>
+                    <h3>Planar nozzle design</h3>
+                    <ul class="highlight-list">
+                        <li>Planar geometry based on an axisymmetric TOP nozzle contour, Nozzle C (AR 6 at 80% length) scaled to a planar area ratio of 2.45.</li>
+                        <li>Throat diameter 15 mm, 9 mm thick, with glass side walls providing full optical access for schlieren imaging. I did the manufacturing, machining and assembly.</li>
+                        <li>First attempt suffered from poor gasket sealing causing leaks, visual artifacts and flow flapping throughout the experiment.</li>
+                        <li>Second attempt sealed with silicone caulking, significantly improving image quality and flow stability across all NPR conditions.</li>
+                    </ul>
                 </div>
-                <div class="metric-card">
-                    <h3>Image</h3>
-                    <p>Captured schlieren images and CFD results to compare FSS/RSS behaviour with expected flow physics.</p>
-                </div>
-                <div class="metric-card">
-                    <h3>Analyze</h3>
-                    <p>Used modal and feedback analysis to understand how the nozzle behaves under varying operating conditions.</p>
+                <div class="card-grid" style="grid-template-columns: minmax(200px, 340px); justify-content: end;">
+                    <div class="project-card">
+                        <img src="photos/nozzle_summer_research/nozzle.jpg" alt="Planar nozzle test article" style="aspect-ratio: auto; width: 100%;">
+                        <h3>Test article</h3>
+                        <p>Glass-walled planar nozzle mounted in the shock lab with pressure taps and schlieren optics aligned.</p>
+                    </div>
                 </div>
             </div>
-        </section>
-        <section class="section">
-            <h2>Current status</h2>
+            <h3>Flow regimes observed</h3>
             <ul class="highlight-list">
-                <li>Test apparatus design is complete and measurement systems are being commissioned.</li>
-                <li>Prototype nozzles are being fabricated for upcoming evaluation campaigns.</li>
-                <li>Data collection plans are in place for iteration and performance refinement.</li>
+                <li>NPR 2.0-2.7: Free jet, no wall attachment, flow exits as a free expansion. Mean schlieren matches CFD planar predictions.</li>
+                <li>NPR 2.8: Transition point where flow begins to interact with the nozzle wall, marking the onset of attachment.</li>
+                <li>NPR 3.0-6.0: Fully attached flow where Coanda effect causes complete wall attachment rather than the partial FSS expected from axisymmetric behaviour.</li>
+                <li>The planar geometry and Coanda effect appear to stabilise the flow once attached, suppressing the azimuthal modes that cause side loadings in axisymmetric nozzles.</li>
+            </ul>
+            <div class="card-grid">
+                <div class="project-card">
+                    <video controls>
+                        <source src="photos/nozzle_summer_research/schlieren_imaging.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </source></video>
+                    <h3>Low NPR (wide view)</h3>
+                    <p>High-speed schlieren at low NPR showing the free jet regime before flow attachment.</p>
+                </div>
+                <div class="project-card">
+                    <video controls>
+                        <source src="photos/nozzle_summer_research/close_up_schlieren.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </source></video>
+                    <h3>Low NPR (close-up)</h3>
+                    <p>Zoomed-in high-speed recording of the same low NPR case, resolving finer shock structures.</p>
+                </div>
+            </div>
+            <h3>SPOD and modal analysis</h3>
+            <ul class="highlight-list">
+                <li>Spectral Proper Orthogonal Decomposition applied to schlieren sequences to identify coherent structures and feedback mechanisms.</li>
+                <li>Sharp spectral peaks appear at low NPR (free jet regime) and disappear once attachment occurs at higher NPR.</li>
+                <li>The broad and sharp peaks appear linked. Strouhal values are additive combinations of each other, suggesting mach disk wobbling (broad peak) may drive the screech-like tones (sharp peaks).</li>
+                <li>Broad peaks could indicate transonic resonance but don't fit the current model well. Sharp peaks may be screech but this is uncertain in a planar nozzle geometry.</li>
+            </ul>
+            <div class="card-grid">
+                <div class="project-card">
+                    <img src="photos/nozzle_summer_research/screech_peaks.png" alt="Screech frequency peaks">
+                    <h3>Screech analysis</h3>
+                    <p>Screech peak identification showing dominant acoustic frequencies across the NPR range and their relation to flow regime transitions.</p>
+                </div>
+                <div class="project-card">
+                    <img src="photos/nozzle_summer_research/SPOD_modes.png" alt="SPOD mode analysis">
+                    <h3>SPOD modes</h3>
+                    <p>Spatial modes from SPOD analysis revealing the underlying feedback structures in the overexpanded planar nozzle flow.</p>
+                </div>
+                <div class="project-card">
+                    <video controls>
+                        <source src="photos/nozzle_summer_research/spod.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </source></video>
+                    <h3>SPOD video</h3>
+                    <p>SPOD reconstruction showing dominant modal behaviour and wave propagation across the nozzle flow field.</p>
+                </div>
+            </div>
+        </section>
+        <section class="section">
+            <h2>Results and discussion</h2>
+            <ul class="highlight-list">
+                <li>Sharp spectral peaks appear at low NPR (free jet regime) and disappear after flow attachment occurs at higher NPR. The attached Coanda-driven flow suppresses acoustic feedback.</li>
+                <li>Broad peak also disappears shortly after attachment, indicating the mach disk wobbling mode is stabilised once the flow sticks to the wall.</li>
+                <li>Coanda effect is potentially playing a key role: entrainment flow creates negative pressure causing attachment to the wall. At low NPR the flow bends to one side; when the flow splits (forks), the two separate streams are immediately attracted to the respective walls and stick, contradicting CFD.</li>
+                <li>Broad and sharp peaks appear linked. St values are additive combinations of each other, suggesting mach disk wobbling (broad peak) drives the screech-like peaks (sharp peaks).</li>
+                <li>The NPR 2.3 case at 300 mm focal length shows the mach disk wobbling has multiple modes, further supporting this coupling hypothesis.</li>
+            </ul>
+            <div class="card-grid">
+                <div class="project-card">
+                    <img src="photos/nozzle_summer_research/npr_6_mean_schlieren.png" alt="Mean flow comparison">
+                    <h3>Mean flow</h3>
+                    <p>Mean schlieren image at NPR 6.0 showing the attached flow regime.</p>
+                </div>
+                <div class="project-card">
+                    <img src="photos/nozzle_summer_research/screech_peaks.png" alt="Acoustic characterisation">
+                    <h3>Acoustic peaks</h3>
+                    <p>Screech peak at free jet NPR range showing broad peak and resonant sharp peaks.</p>
+                </div>
+            </div>
+        </section>
+        <section class="section">
+            <h2>Personal takeaways</h2>
+            <ul class="highlight-list">
+                <li>Went from never having heard of FSS or RSS to a solid base understanding of the physics, shock structures and separation behaviour in overexpanded nozzles.</li>
+                <li>Gained hands-on lab experience: setting up and running schlieren, analysing data, running high-speed cameras at 150k FPS.</li>
+                <li>Learnt CFD modelling of nozzle flows and how to compare experimental schlieren with computational predictions.</li>
+                <li>Developed data analysis skills in SPOD, reading mode shapes, spectra and wavenumber spectrums to identify coherent structures.</li>
+                <li>Began exploring the relationship between transonic resonance, screech and mach disk wobbling in the feedback loop.</li>
+                <li>Furthered my understanding of aeroacoustics, design and the scientific method.</li>
+            </ul>
+        </section>
+        <section class="section">
+            <h2>Technical documents</h2>
+            <ul class="highlight-list">
+                <li><a href="photos/nozzle_summer_research/SRP_Presentation.pdf" target="_blank">SRP presentation: Planar nozzle design, experimental setup and SPOD analysis of overexpanded flows</a></li>
             </ul>
         </section>
     </main>
     <footer>
-        <p>&copy; 2026 Tom Russell • Aerospace Engineering Portfolio</p>
+        <p>2026 Tom Russell • Aerospace Engineering Portfolio</p>
     </footer>
 </body>
 </html>

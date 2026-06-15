@@ -14,8 +14,17 @@
             <a class="home-button" href="home.html">Tom Russell - Portfolio</a>
             <nav>
                 <a href="home.html">Home</a>
-                <a href="about.html">About</a>
-                <a href="projects.html">Projects</a>
+                <div class="nav-dropdown">
+                    <button type="button">Projects</button>
+                    <div class="dropdown-menu">
+                        <a href="liquid_engine.html">Liquid Rocket Engine</a>
+                        <a href="solaris_mkII.html">Solaris MKII</a>
+                        <a href="solaris_mkIII.html">Solaris MKIII</a>
+                        <a href="hydrogen_jet_facility.html">Hydrogen Jet Facility</a>
+                        <a href="nitrous_oxide_fill_station.html">Nitrous Oxide Fill Station</a>
+                        <a href="nozzle_summer_research.html">Nozzle Summer Research</a>
+                    </div>
+                </div>
                 <a href="Thomas%20Russell%20-%20Resume%202026.pdf" target="_blank">Resume</a>
             </nav>
         </div>
@@ -26,7 +35,7 @@
                 <div class="hero-copy hero-copy--banner">
                     <p class="eyebrow">Overview</p>
                     <h2>Liquid Rocket Engine Project</h2>
-                    <p>This project combines fluid system design, valve actuation, electrical controls and injector performance evaluation to build a test-ready liquid rocket engine. Personal development of a liquid rocket engine with nitrous oxide feed systems, electronics and empirical thrust validation.</p>
+                    <p>Personal project developing a liquid engine from scratch using a completely custom valve, tank and chamber design machined and tested by me.</p>
                 </div>
             </div>
     </header>
@@ -40,110 +49,138 @@
         <section class="section">
             <h2>Scope</h2>
             <ul class="highlight-list">
-                <li>Designed a nitrous oxide fill and ground support equipment package with safety and instrumentation integration.</li>
-                <li>Developed a pyro-actuated Urbanski-Colburn style valve system to manage fuel and oxidiser flow from a single fill line.</li>
-                <li>Built a custom data acquisition system for live pressure, temperature, thrust and camera telemetry.</li>
-                <li>Performed valve and injector characterisation to refine momentum ratios, spray performance and chamber stability.</li>
+                <li>Design and machine a nitrous oxide and IPA liquid rocket engine with fully custom concentric tanks, floating piston, and a UC valve.</li>
+                <li>Develop a valve and injector architecture compatible with manual lathe and mill fabrication while preserving performance and control.</li>
+                <li>Characterise injector flow, discharge coefficients, and spray geometry through water and cold gas testing before hot fire.</li>
+                <li>Build instrumentation for live pressure, temperature, thrust and video telemetry to validate system behaviour and safety.</li>
             </ul>
         </section>
         <section class="section">
-            <h2>Impact</h2>
+            <h2>Key Characteristics</h2>
             <div class="metric-grid">
                 <div class="metric-card">
-                    <h3>Integrated instrumented test stand</h3>
-                    <p>Complete system-level hardware ready for hot fire campaigns with live data capture.</p>
+                    <h3>Predicted engine performance</h3>
+                    <p>Peak thrust of 700 N with a 480 N average, giving a total impulse of 1840 Ns and placing the engine in the approximate K480 motor class. Assuming modest 65% C* efficiency.</p>
                 </div>
                 <div class="metric-card">
-                    <h3>Custom valve and injector design</h3>
-                    <p>Pintle-style injector development with empirical discharge mapping for performance tuning.</p>
+                    <h3>Simulation informed design</h3>
+                    <p>Feed system and injector were sized using thermodynamic simulation outputs, pressure/temperature modelling and propellant massflow estimates.</p>
                 </div>
                 <div class="metric-card">
-                    <h3>Simulation-driven planning</h3>
-                    <p>Thermodynamic modelling used to shape test expectations and support risk mitigation.</p>
+                    <h3>Floating piston and concentric tanks</h3>
+                    <p>Concentric oxidiser and fuel tubes with a floating piston separation. Nitrous oxide is used to pressurise the IPA.</p><br>
                 </div>
             </div>
-        </section>
-        <section class="section">
-            <h2>Process & visuals</h2>
             <div class="card-grid">
                 <div class="project-card">
-                    <img src="photos/liquid_engine/engine_cad.png" alt="Liquid engine CAD model">
-                    <h3>Architecture</h3>
-                    <p>Mapped the liquid engine, feed system and safety envelope before selecting valves, sensors and hardware paths.</p>
+                    <img src="photos/liquid_engine/thrust_curve.png" alt="Predicted thrust curve">
+                    <h3>Predicted thrust curve</h3>
+                    <p>Simulation thrust curve to compare against empirical results and inform design.</p>
                 </div>
                 <div class="project-card">
-                    <img src="photos/liquid_engine/machined_valve.jpeg" alt="Machined liquid valve">
-                    <h3>Build</h3>
-                    <p>Fabricated manifolds, actuated valves and instrumentation panels while integrating controls for hot fire readiness.</p>
-                </div>
-                <div class="project-card">
-                    <img src="photos/liquid_engine/water_injector_testing1.jpeg" alt="Injector water testing">
-                    <h3>Validation</h3>
-                    <p>Executed valve and injector tests with live DAQ capture to refine performance, timing and safety protocols.</p>
-                </div>
-            </div>
-        </section>
-        <section class="section">
-            <h2>Media gallery</h2>
-            <div class="media-gallery">
-                <figure>
                     <img src="photos/liquid_engine/pressure_temp_sim.png" alt="Pressure and temperature simulation">
-                    <figcaption>Pressure and temperature performance simulation used to validate design assumptions.</figcaption>
-                </figure>
-                <figure>
-                    <img src="photos/liquid_engine/thrust_curve.png" alt="Measured thrust curve">
-                    <figcaption>Measured thrust curve during system testing to check performance and stability.</figcaption>
-                </figure>
-                <figure>
-                    <img src="photos/liquid_engine/liquid_sim_code.png" alt="Simulation and analysis code">
-                    <figcaption>Analysis code and simulation outputs used to refine the feed system.</figcaption>
-                </figure>
-                <figure>
-                    <img src="photos/liquid_engine/Image.jpg" alt="Fabrication and parts overview">
-                    <figcaption>Fabrication overview showing the machined parts and assembly layout.</figcaption>
-                </figure>
-                <figure>
-                    <img src="photos/liquid_engine/tube_machining_lathe.jpeg" alt="Lathe machining for tubing">
-                    <figcaption>Machining tubing on the lathe for the engine feed path.</figcaption>
-                </figure>
-                <figure>
-                    <img src="photos/liquid_engine/water_injector_testing.jpeg" alt="Injector water testing">
-                    <figcaption>Injector water testing setup to validate spray distribution and flow control.</figcaption>
-                </figure>
-                <figure>
-                    <img src="photos/liquid_engine/water_injector_testing1.jpeg" alt="Injector testing close-up">
-                    <figcaption>Close-up of the injector during testing and instrumentation setup.</figcaption>
-                </figure>
-            </div>
-        </section>
-        <section class="section">
-            <h2>Project story</h2>
-            <div class="metric-grid">
-                <div class="metric-card">
-                    <h3>Define</h3>
-                    <p>Set requirements for N2O handling, instrumentation, pressure control and measurable hot fire performance.</p>
-                </div>
-                <div class="metric-card">
-                    <h3>Develop</h3>
-                    <p>Designed, prototyped and assembled a full liquid engine test system with integrated control and safety subsystems.</p>
-                </div>
-                <div class="metric-card">
-                    <h3>Deliver</h3>
-                    <p>Brought the system to a test-ready state with documented commissioning steps and performance review criteria.</p>
+                    <h3>Predicted thermodynamics</h3>
+                    <p>Pressure and temperature modelling to used to find pressure drops and initial conditions for engine.</p>
                 </div>
             </div>
         </section>
         <section class="section">
-            <h2>Status</h2>
+            <h2>Design Overview</h2>
+            <h3>Concentric tank and floating piston</h3>
+            <p>The engine uses a concentric tank geometry with a 48 mm inner oxidiser tube and a 76.2 mm outer fuel tube. A floating piston separates the nitrous oxide from the fuel and maintains a pressure on the fuel from the nitrous.</p>
+            <p>Concentric tanks allowed for simplified valve design, makes for a floating piston less likely to cam and doesnt required an extra line to bring either the fuel or oxidiser from the top tank which is needed in a stacked tank design. The design also accommodates stock circularity variance through generous O-ring cross-sections, making the sealed assembly forgiving to the measured 0.2 mm ID variation in the tube stock.</p>
+            <h3>Valve design</h3>
+            <p>The valve is based on a UC style valve, extended to support both oxidiser and fuel actuation using just the oxidiser fill tube. This approach preserves the compatibility of a classic burn-through hybrid UC while adding a true pintle injector and an independent check valve to regain ignition timing control.</p>
+            <p>Using the dump function on the ground support equipment, the valve can now be actuated without relying on uncontrolled burn through. That removes the two biggest UC drawbacks, poor timing control and lack of true injector integration.</p>
+            <div class="full-image-card">
+                <img src="photos/liquid_engine/valve_cross_section.png" alt="Valve cross section">
+                <h3>Valve geometry</h3>
+                <p>Cross-section detail shows the oxidiser and fuel paths, pintle profile, and sealing interfaces.</p>
+            </div>
+            <h3>Injector development</h3>
+            <p>The injector is a pintle injector with an outer fuel annulus and an inner oxidiser pintle. Injector geometry was chosen to match target OF ratio and momentum ratios. The CdA values determined from the model and water testing of the 3D printed injectors were used to size the effective areas of the injector elements.</p>
+            <p>Initial sizing and testing produced a fuel injector area of approximately 2.03 mm² and an oxidiser area of 20.34 mm², with discharge coefficients of 0.8 for fuel and 0.4 for oxidiser. These values were iterated through modelling and flow testing to support the expected 0.35 kg/s total massflow. </p>
+            <div class="card-grid">
+                <div class="project-card">
+                    <video controls>
+                        <source src="photos/liquid_engine/Valve_animation.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </source></video>
+                    <h3>Valve motion</h3>
+                    <p>Animation directly illustrates the valve actuation and the transition between open and closed states with flow paths.</p>
+                </div>
+                <div class="project-card">
+                    <img src="photos/liquid_engine/Valve_open.png" alt="Valve open state">
+                    <h3>Valve open state</h3>
+                    <p>The open position occurs when the fill line is dumped, pressure on the underside of the piston drops to atmospheric and the excess pressure on top of the piston allows it to be actuated open.</p>
+                </div>
+                <div class="project-card">
+                    <img src="photos/liquid_engine/Valve_closed.png" alt="Valve closed state">
+                    <h3>Valve closed state</h3>
+                    <p>In the closed state the unequal area of the valve piston exposed to the nitrous pressure ensures there is a net force holding the piston up..</p>
+                </div>
+            </div>
+        </section>
+        <section class="section">
+            <h2>Injector testing and characterisation</h2>
+            <p>Testing began with 3D printed injector prototypes to verify flow rates and spray geometry. Separate inner and outer flow measurements were taken with different prints, and the data was used to derive empirical Cd values for fuel and oxidiser.</p>
+            <p>Water tests validated the injector performance, including spray angle and flow distribution. The test programme also aims to establish a correlation between 3D printed and machined injector behaviour, testing to take place soon, machined components have just been finished.</p>
             <ul class="highlight-list">
-                <li>Hardware prototyping completed, with initial valve testing already underway.</li>
-                <li>Planning a hot fire test campaign with expanded instrumentation and safety protocols.</li>
-                <li>Project documentation, photos and results are being assembled for the next development milestone.</li>
+                <li>Initial test showed outer flow higher than the model, so annulus sizing was corrected to match the predicted spray angle within ~2%.</li>
+                <li>Adding a pseudo annulus for the outer flow holes helped direct the flow and increase mixing while preserving the target OF ratio.</li>
+                <li>Pump fed water tests measured a mass flow of ~0.28 kg/s, matching simulations at the time.</li>
+                <li>Final tuning produced empirical discharge coefficients near <strong>Cd_fuel = 0.8</strong> and <strong>Cd_ox = 0.4</strong>, which was used as the basis for the final design. I am expecting some difference due to surface roughness, simplified geometry of the 3D print and the difference in fluid characteristics between water and especially the nitrous oxide.</li>
             </ul>
+            <div class="full-image-card">
+                <img src="photos/liquid_engine/water_injector_testing.jpeg" alt="Water injector testing">
+                <h3>Water validation</h3>
+                <p>Water testing captured spray formation and helped refine the injector's discharge coefficients.</p>
+            </div>
+        </section>
+        <section class="section">
+            <h2>Manufacturing</h2>
+            <p>All components were manufactured on manual lathes and mills from local tube stock and billet. Radial bolts are shoulder bolts, matched drilled with bushings and designed to NASA 5020b standards for bolted joints.</p>
+            <p>An aft thread on the engine assembly lets internal components be compressed to manage axial tolerance and reduces the need for extremely tight axial fits. This thread preload strategy and generous O-ring seals support manufacturability and ease of assembly.</p>
+            <div class="card-grid">
+                <div class="project-card">
+                    <div class="card-images">
+                        <img src="photos/liquid_engine/photoshoot/IMG_2551.png" alt="Finished valve injector and tank hardware">
+                        <img src="photos/liquid_engine/photoshoot/IMG_2553.png" alt="Machined parts assembly fitment">
+                    </div>
+                    <h3>Finished hardware</h3>
+                    <p>Valve, injector and hydro/cold flow tank components.</p>
+                </div>
+                <div class="project-card">
+                    <div class="rotate-frame">
+                        <img src="photos/liquid_engine/photoshoot/IMG_2555.png" alt="Machined component layout">
+                    </div>
+                    <h3>Finished valve</h3>
+                    <p>Completed main valve assembly.</p>
+                </div>
+                <div class="project-card">
+                    <img src="photos/liquid_engine/tube_machining_lathe.jpeg" alt="Lathe machining of tank stock">
+                    <h3>Lathe work</h3>
+                    <p>Manual turning for the inner concentric tank.</p>
+                </div>
+            </div>
+        </section>
+        <section class="section">
+            <h2>Hydrostatic and cold gas testing</h2>
+            <p>Before committing to hot fire, a dedicated hydro and cold gas campaign will be done to validate the system with minimal safety risks. This phase will prove structural strength, valve actuation and injector performance.</p>
+            <ul class="highlight-list">
+                <li>Hydrostatic pressure checks to confirm the concentric tank, floating piston and O-ring seals held under working load.</li>
+                <li>Cold gas runs to verify valve functionality and steady flow through both oxidiser and fuel paths.</li>
+                <li>Pump fed water tests to match injector behaviour to simulations prior to hot fire.</li>
+            </ul>
+            <div class="full-image-card">
+                <img src="photos/liquid_engine/photoshoot/IMG_2551.png" alt="Hydro and cold gas testing rig">
+                <h3>Hydrostatic test</h3>
+                <p>Hydrostatic test of the complete valve and injector assembly with sub-scale tanks.</p>
+            </div>
         </section>
     </main>
     <footer>
-        <p>&copy; 2026 Tom Russell • Aerospace Engineering Portfolio</p>
+        <p>2026 Tom Russell • Aerospace Engineering Portfolio</p>
     </footer>
 </body>
 </html>

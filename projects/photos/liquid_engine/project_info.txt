@@ -1,0 +1,100 @@
+Simulation input/output:
+## Injector setup
+
+Cd_ox = .4
+Cd_fuel = .8
+
+# PCD of injector elements
+R_pcd = 14
+# Radius of covering annulus
+R_c = 13.44
+# Hole radius
+R_h = .75
+# Number of elements
+n = 16
+# Number of fully open elements
+n_open = 0
+
+# delta_sleeve width of upper pintle tip annulus
+d_sleeve = 0.5 * 10**-3;
+
+# Pintle tip diameter
+D_pt = 19 * 10**-3;
+# Pintle tip deflection angle
+theta_pt = 45;
+# Pintle tip vertical annulus gap
+L_vert = 1.016*10**-3;
+
+injector = Pintle()
+injector.init_outer(R_pcd, R_c, R_h, n, n_open, Cd_fuel)
+injector.init_inner(d_sleeve, D_pt, theta_pt, L_vert, Cd_ox)
+
+## Tank setup
+
+# Tube sizes
+D_ox = 48
+t_ox = 2
+D_fuel = 76.19
+t_fuel = 6.35
+t_piston = 15
+vent_height = 20
+
+L_ox = 331 + 175 + 100
+L_ox_o = 355
+L_outer = 332 + 175 + 90.8
+
+T_atm = 290
+p_atm = 101325
+p_loss = 1*10**5
+p_tank_0 = PropsSI('P', 'T', T_atm, 'Q', 1, 'N2O')
+R_atm = 287
+gamma_atm = 1.4
+
+tank = Tank(D_ox, t_ox, D_fuel, t_fuel, t_piston, L_ox, L_ox_o, L_outer, T_atm, p_tank_0, R_atm, gamma_atm, injector.CdA_fuel, injector.CdA_ox, vent_height, p_loss)
+tank.plot_engine()
+
+
+A_t = (np.pi/4) * ((7*2)**2) * 10**(-6) 
+A_e = (np.pi/4) * ((14.7*2)**2) * 10**(-6) 
+A_ratio = A_e/A_t
+
+length = .075
+radius = .025
+volume = np.pi*(radius**2)*length
+
+comb_eff = .65
+nozzle_eff = .95
+
+
+Peak thrust: 857.0 N
+Average thrust: 481.0 N
+Impulse: 1841.0 Ns
+Motor class: K481
+ISP Avg: 141 s
+ISP Initial: 150 s
+
+Total massflow rate: 0.347 kg/s         Total propellant mass: 1.33 kg
+Oxidiser massflow rate: 0.284 kg/s      Oxidiser mass: 1.09 kg
+Fuel massflow rate: 0.063 kg/s          Fuel mass: 0.24 kg
+Tank mixture ratio: 4.54                Average OF ratio: 4.71
+
+Fuel CdA: 1.6255301870988503e-06 m^2
+Oxidiser CdA: 8.13480492196475e-06 m^2
+Fuel injector area: 2.03 mm^2
+Oxidiser injector area: 20.34 mm^2
+
+
+Valve design:
+The valve is a UC design. Typically a UC is used in a hybrid engine where only the oxidiser needs to be opened, the line is burnt through and the oxidiser enters the chamber through the same fitting, not requiring any valve work. My design takes this concept a step further and looks at using the fill tube and burn through to not only actuate the oxidiser but the fuel as well. Not only that but using an actual pintle injector rather than the fitting, fixing one of the biggest draw backs of a typical UC valve. Adding a check valve also allows me to use the dump function on my GSE to control valve actuation rather than burn through, giving me complete control over my ignition timing, fixing the second biggest issue of a typical UC engine, creating a no compromise approach while still being compatible with the same GSE and controls a typical UC would need. Maintaining machinability, sealing, a design that actually functioned while minimising performance losses over the valve and injector took many iterations and was one of the largest challenges, you can see some of the many iterations I went through.
+
+
+Manufacturing:
+Leveraged my machining and fabrication skills for this project, manufacturing components myself on manual lathes and mills. The radial bolts use shoulder bolts match drilled with drill bushings, the joints are designed to NASA5020b standard for bolted joints to ensure reliability. The aft thread on the engine allows me to compress the internal components of the engine to take account for any axial tolerance issues, alleviating strict axial tolerancing needed for a purely radial bolted pressure vessel. The tube stock is chosen based on local suppliers and turned to size, the circularity of the ID of the stock is accounted for with large o-ring cross-sections which are forgiving with the measured 0.2mm variance in ID.
+
+
+Injector testing:
+Details in the "injector_testing" spreadsheet. Made 3D prints of the injector, tested with various hoses, attached pressure gauge to measure pressure, derived Cd of fuel and ox from that to help ballpark actual injector sizing. Im aware it wont be exact but a good starting point, eventually used a water pump to get decent pressure, tested both inner and outer flows with the other blocked as well, measured spray angles to compare to formulas found from literature, found really good agreement, tweaked to get good OF and spray angle for actual design, will cold gas and water test the machined injector to find a correlation to 3D print, TBD.
+
+Hydro and cold gas:
+Made a small tank and inner tank to do hydrostatic and injector testing to also validate valve design before committing to hotfire.
+

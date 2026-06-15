@@ -14,113 +14,129 @@
             <a class="home-button" href="home.html">Tom Russell - Portfolio</a>
             <nav>
                 <a href="home.html">Home</a>
-                <a href="about.html">About</a>
-                <a href="projects.html">Projects</a>
+                <div class="nav-dropdown">
+                    <button type="button">Projects</button>
+                    <div class="dropdown-menu">
+                        <a href="liquid_engine.html">Liquid Rocket Engine</a>
+                        <a href="solaris_mkII.html">Solaris MKII</a>
+                        <a href="solaris_mkIII.html">Solaris MKIII</a>
+                        <a href="hydrogen_jet_facility.html">Hydrogen Jet Facility</a>
+                        <a href="nitrous_oxide_fill_station.html">Nitrous Oxide Fill Station</a>
+                        <a href="nozzle_summer_research.html">Nozzle Summer Research</a>
+                    </div>
+                </div>
                 <a href="Thomas%20Russell%20-%20Resume%202026.pdf" target="_blank">Resume</a>
             </nav>
         </div>
         <div class="hero-banner">
             <div class="hero-media">
-                <img src="photos/nitrous_gse/pcb_render.png" alt="Nitrous oxide fill station render">
+                <img src="photos/nitrous_gse/pcb_render.png" alt="Nitrous oxide fill station DAQ PCB render">
             </div>
             <div class="hero-copy hero-copy--banner">
                 <p class="eyebrow">Overview</p>
-                <h2>Designing oxidiser ground support equipment for safe nitrous oxide fill operations.</h2>
-                <p>This project delivers a portable nitrous oxide fill station with pressure control, leak detection and operator safety features.</p>
+                <h2>Remote nitrous fill box with custom DAQ and control.</h2>
+                <p>Electronics and software based personal project to develop my skills in that area, learning embedded design, networking and DAQ fundamentals while leveraging my fluids experience.</p>
             </div>
         </div>
     </header>
     <main>
         <section class="section">
-            <h2>Role</h2>
+            <h2>Scope</h2>
             <ul class="highlight-list">
-                <li>Designing piping, valves and pressure regulation for nitrous oxygen transfer and storage.</li>
-                <li>Integrating safety interlocks, venting systems and instrumentation for controlled fill sequences.</li>
-                <li>Preparing hardware and operating procedures for field use during hybrid rocket campaigns.</li>
+                <li>Develop a DAQ PCB for standalone control of a nitrous oxide fill box with pressure, temperature and load cell live display and relay actuation.</li>
+                <li>Implement networking code for remote telemetry and camera streaming over 100 m.</li>
+                <li>Build practical electronics and software skills through a real application.</li>
+                <li>Build a low cost GSE, making a highly portable system to service my hobby rocketry needs.</li>
             </ul>
         </section>
         <section class="section">
-            <h2>Technical focus</h2>
+            <h2>Key Characteristics</h2>
             <div class="metric-grid">
                 <div class="metric-card">
-                    <h3>Fluid systems</h3>
-                    <p>Pressure-controlled flow paths and plumbing suited to cryogenic-style nitrous oxide handling.</p>
+                    <h3>DAQ PCB</h3>
+                    <p>Custom board with pressure transducer inputs, thermocouple inputs and circuits, relay control, load cell amplifier and MCU for communicating to control station.</p>
                 </div>
                 <div class="metric-card">
-                    <h3>Safety systems</h3>
-                    <p>Leak detection, emergency isolation and operator control to protect personnel and equipment.</p>
+                    <h3>Remote operation</h3>
+                    <p>Network setup with Ubiquiti, sockets using UDP, websockets with TCP connecting to JS/HTML frontend from 100 m away, very low latency, and complete feedback and heartbeat.</p>
                 </div>
                 <div class="metric-card">
-                    <h3>Operational readiness</h3>
-                    <p>Field-ready packaging, checklists and commissioning support for worksite deployment.</p>
+                    <h3>Ground station</h3>
+                    <p>UI for monitoring pressure, temperature, thrust, initiating logging, commanding relays and viewing the camera stream from a safe distance.</p><br>
                 </div>
             </div>
-        </section>
-        <section class="section">
-            <h2>Process & visuals</h2>
             <div class="card-grid">
                 <div class="project-card">
-                    <img src="photos/nitrous_gse/pcb_schematic.png" alt="Nitrous oxide fill station PCB schematic">
-                    <h3>Define</h3>
-                    <p>Mapped the nitrous oxide fill sequence, pressure control points and safety interlocks for safe operation.</p>
+                    <img src="photos/nitrous_gse/pcb_schematic.png" alt="DAQ PCB schematic">
+                    <h3>Schematic</h3>
+                    <p>Circuit schematic showing the pressure sensor inputs, thermocouple IC circuit, load cell amplifier circuit and relay control.</p>
                 </div>
                 <div class="project-card">
-                    <img src="photos/nitrous_gse/pcb_routing.png" alt="Control PCB routing">
-                    <h3>Build</h3>
-                    <p>Developed the valve logic, instrumentation panel and printed circuit board layout for automated fills.</p>
-                </div>
-                <div class="project-card">
-                    <img src="photos/nitrous_gse/pcb_render.png" alt="PCB render for nitrous GSE control board">
-                    <h3>Verify</h3>
-                    <p>Completed validation checks and performance reviews to ensure the station meets launch support requirements.</p>
+                    <img src="photos/nitrous_gse/pcb_render.png" alt="PCB render">
+                    <h3>Board render</h3>
+                    <p>3D render of the assembled DAQ PCB with all components placed.</p>
                 </div>
             </div>
         </section>
         <section class="section">
-            <h2>Media gallery</h2>
-            <div class="media-gallery">
-                <figure>
-                    <img src="photos/nitrous_gse/pcb_render.png" alt="Nitrous control board render">
-                    <figcaption>Render of the control board supporting the fill station electronics.</figcaption>
-                </figure>
-                <figure>
-                    <img src="photos/nitrous_gse/pcb_routing.png" alt="PCB routing">
-                    <figcaption>PCB routing layout for the valve logic and sensor integration.</figcaption>
-                </figure>
-                <figure>
-                    <img src="photos/nitrous_gse/pcb_schematic.png" alt="PCB schematic">
-                    <figcaption>Schematic showing the control and safety systems for the fill process.</figcaption>
-                </figure>
+            <div class="subsection-grid">
+                <div class="subsection-text">
+                    <h2>Ground station software</h2>
+                    <ul class="highlight-list">
+                        <li>Live pressure readback, relay toggle controls and integrated camera stream for remote operation from a safe distance.</li>
+                        <li>Telemetry and video designed to be livestreamed from over 100 m from the fill box.</li>
+                        <li>Python backend setup with sockets and websockets using UDP for high refresh rate sensors and TCP to connect video stream, all interfacing with JS/HTML front end</li>
+                        <li>PCB communicates via UART with phone at pad side, phone connects to ubiquiti network and data is streamed from there back to control to be received and sorted into end points</li>
+                    </ul>
+                </div>
+                <div class="card-grid" style="grid-template-columns: minmax(300px, 1fr); justify-content: end;">
+                    <div class="project-card">
+                        <img src="photos/nitrous_gse/control_gui.png" alt="Control GUI" style="aspect-ratio: auto; width: 100%;">
+                        <h3>Ground station GUI</h3>
+                        <p>GUI showing live readouts of engine and GSE telemetry.</p>
+                    </div>
+                </div>
             </div>
         </section>
         <section class="section">
-            <h2>Project story</h2>
-            <div class="metric-grid">
-                <div class="metric-card">
-                    <h3>Scope</h3>
-                    <p>Defined the ground support equipment goals for safe, fast and controllable nitrous oxide filling.</p>
+            <div class="subsection-grid">
+                <div class="subsection-text">
+                    <h2>Design Overview</h2>
+                    <h3>DAQ PCB design</h3>
+                    <ul class="highlight-list">
+                        <li>Microcontroller reads pressure transducers, thermocouples (via IC) and load cell (via amplifier) using various filters to optimise signal. Digital pins used to drive separate relay board.</li>
+                        <li>Designed to minimise cost and maintain simplicity, has all capabilities of more expensive DAQ with less channels.</li>
+                        <li>PCB mounts inside a portable enclosure alongside the fluid components, communicating with a pad-side phone over UART which then handles networking.</li>
+                    </ul>
                 </div>
-                <div class="metric-card">
-                    <h3>Design</h3>
-                    <p>Developed pressure regulation, venting, safety interlocks and monitoring for field use.</p>
-                </div>
-                <div class="metric-card">
-                    <h3>Deploy</h3>
-                    <p>Prepared the station for practical integration with vehicle systems and test operations.</p>
+                <div class="card-grid" style="grid-template-columns: minmax(200px, 340px); justify-content: end;">
+                    <div class="project-card">
+                        <img src="photos/nitrous_gse/pcb_routing.png" alt="DAQ PCB routing">
+                        <h3>PCB layout</h3>
+                        <p>Routing and component placement for the DAQ board.</p>
+                    </div>
                 </div>
             </div>
+        </section>
+        <section class="section">
+            <h2>Personal takeaways</h2>
+            <ul class="highlight-list">
+                <li>Learnt PCB design from schematic to routed board, learning thermocouple and load cell circuit design, routing design, filtering and strong embedded design fundamentals.</li>
+                <li>Built a full networking stack and remote operation GUI, gaining practical experience with networking and high speed data streaming.</li>
+                <li>Developed a better understanding of GSE requirements for hybrid rocket operations and how electronics integrate with fluid systems.</li>
+            </ul>
         </section>
         <section class="section">
             <h2>Current status</h2>
             <ul class="highlight-list">
-                <li>Core hardware layout is complete and safety subsystems are being validated.</li>
-                <li>Control logic for fill sequences is under review with the test team.</li>
-                <li>Documentation for assembly, operation and maintenance is being prepared.</li>
+                <li>DAQ PCB is made and has been tested. Networking code and ground station GUI are functional with remote telemetry and camera streaming demonstrated over 100 m.</li>
+                <li>Fluid system is complete and hydrostatically tested.</li>
+                <li>Last step is box manufacturing to put all components in, entire system has been tested without box.</li>
             </ul>
         </section>
     </main>
     <footer>
-        <p>&copy; 2026 Tom Russell • Aerospace Engineering Portfolio</p>
+        <p>2026 Tom Russell • Aerospace Engineering Portfolio</p>
     </footer>
 </body>
 </html>

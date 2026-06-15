@@ -14,125 +14,191 @@
             <a class="home-button" href="home.html">Tom Russell - Portfolio</a>
             <nav>
                 <a href="home.html">Home</a>
-                <a href="about.html">About</a>
-                <a href="projects.html">Projects</a>
+                <div class="nav-dropdown">
+                    <button type="button">Projects</button>
+                    <div class="dropdown-menu">
+                        <a href="liquid_engine.html">Liquid Rocket Engine</a>
+                        <a href="solaris_mkII.html">Solaris MKII</a>
+                        <a href="solaris_mkIII.html">Solaris MKIII</a>
+                        <a href="hydrogen_jet_facility.html">Hydrogen Jet Facility</a>
+                        <a href="nitrous_oxide_fill_station.html">Nitrous Oxide Fill Station</a>
+                        <a href="nozzle_summer_research.html">Nozzle Summer Research</a>
+                    </div>
+                </div>
                 <a href="Thomas%20Russell%20-%20Resume%202026.pdf" target="_blank">Resume</a>
             </nav>
         </div>
         <div class="hero-banner">
             <div class="hero-media">
-                <img src="photos/solaris_mkii/Zenith First Launch Video Final.gif" alt="Solaris MKII launch process animation">
-            </div>
+                    <img src="photos/solaris_mkii/Zenith First Launch Video Final.gif" alt="Solaris MKII launch process animation">
+                </div>
                 <div class="hero-copy hero-copy--banner">
                     <p class="eyebrow">Overview</p>
-                    <h2>Developing a competitive hybrid rocket vehicle for altitude launch missions.</h2>
-                    <p>Solaris MKII combines hybrid propulsion, oxidiser management and team-led hardware readiness to support high-altitude flight objectives.</p>
+                    <h2>Solaris MKII</h2>
+                    <p>Propulsion lead and Launch Operations Lead for Project Zenith: first Australian student hybrid at competition. Won the Jim Furfaro Award for Technical Excellence at IREC 2025.</p>
                 </div>
             </div>
     </header>
     <main>
         <section class="section">
-            <h2>Role</h2>
+            <h2>Scope</h2>
             <ul class="highlight-list">
-                <li>Leading propulsion design and integration for the hybrid rocket vehicle.</li>
-                <li>Shaping feed system architecture, valve control and test infrastructure for launch campaign readiness.</li>
-                <li>Coordinating technical strategy, sponsor engagement and risk management across a 150-person team.</li>
+                <li>Propulsion Lead and Propulsion Vice-Lead for Monash High Powered Rocketry (MHPR) over a two year span, managing a sub-team of 15-20 across engine design, manufacturing, testing and launch.</li>
+                <li>Started as Propulsion Vice-Lead the first year, then became Lead for the second year when the engine flew on Project Zenith for the first time and then competed at IREC 2025 in Texas.</li>
+                <li>First Australian team to launch a student built hybrid at competition, went on to win the Jim Furfaro Award for Technical Excellence from 140+ teams internationally, a first in Australian rocketry. During this competition I was in control for the entire rocket launch operations as the team's Launch Operations Lead.</li>
+                <li>Contributed to the design and build the engine inclduing, tank bulkheads, SRAD pneumatic main valve, capacitive fill sensor, combustion chamber, injector and more.</li>
+                <li>Led a hotfire test campaign across multiple engine iterations, refining ignition timings, fuel grain, reliability and performance from test data.</li>
+                <li>Delivered a flight ready propulsion system integrated into Project Zenith for the team's 10,000 ft apogee competition rocket at IREC 2025.</li>
             </ul>
         </section>
         <section class="section">
-            <h2>Technical focus</h2>
+            <h2>Key Characteristics</h2>
             <div class="metric-grid">
                 <div class="metric-card">
-                    <h3>Propulsion hardware</h3>
-                    <p>Design of 3 kN and 12 kN hybrid rocket engine systems and associated feed components.</p>
+                    <h3>Key metrics</h3>
+                    <p>Nitrous oxide oxidiser with a paraffin fuel grain in an ABS gyroid matrix. 4,000 N peak / 3,400 N average thrust, M3400 class motor.</p>
                 </div>
                 <div class="metric-card">
-                    <h3>Oxidiser systems</h3>
-                    <p>Custom pneumatic valves, fluid lines and safety systems for liquid oxidiser handling.</p>
+                    <h3>SRAD pneumatic valve</h3>
+                    <p>Custom concentric pneumatic valve actuated by a pilot valve using nitrous tap off from tank, unequal-area piston stays sealed until the pilot valve vents the pressure on the underside of the piston. An extremely light weight and compact valve solution allowing high flowrates with a small actuator.</p>
                 </div>
                 <div class="metric-card">
-                    <h3>Test readiness</h3>
-                    <p>Vertical test stand design, instrumentation planning and launch campaign preparation.</p>
+                    <h3>Flight performance</h3>
+                    <p>6 s total burn (3 s liquid + 3 s vapour), Mach 1.0 max velocity, coasting to 10,000 ft apogee under active air brake control. Flown successfully 3 times.</p><br>
                 </div>
             </div>
-        </section>
-        <section class="section">
-            <h2>Process & visuals</h2>
             <div class="card-grid">
                 <div class="project-card">
-                    <img src="photos/solaris_mkii/Solaris.png" alt="Solaris MKII design drawing">
-                    <h3>Vehicle concept</h3>
-                    <p>Transformed early vehicle concept into a hybrid propulsion layout with clear feed path and control boundaries.</p>
+                    <img src="photos/solaris_mkii/Mkii_thrust_curve.PNG" alt="Solaris MKII thrust curve">
+                    <h3>Thermodynamic modelling</h3>
+                    <p>I worked directly on the simulations for this engine using isentropic flow, vapour curves, non-homogenous equillibrium mass flow rate models and more to predict performance and inform design.</p>
                 </div>
                 <div class="project-card">
                     <img src="photos/solaris_mkii/Nozzle_MkII.png" alt="Solaris MKII nozzle design">
-                    <h3>Engine integration</h3>
-                    <p>Integrated oxidiser systems, pneumatic valves and load-bearing hardware to support flight-ready assembly.</p>
+                    <h3>Hotfire campaign</h3>
+                    <p>Let a campaign of over 10 successful hotfires along with cold gas tests, and countless failures, learning a lot along the way.</p>
+                </div>
+            </div>
+        </section>
+        <section class="section">
+            <h2>Design Overview</h2>
+            <h3>Engine Overview</h3>
+            <p>Solaris MkII uses nitrous oxide as the oxidiser with an paraffin wax fuel grain casted in a gyroid ABS matrix. Additionally it features a vortex swirl injector, custom SRAD valve and custom welded tanks which I contributed to the design for. The engine cross section shows the complete internal layout from the oxidiser tank interface through the main valve, injector, fuel grain, and nozzle.</p>
+            <div class="card-grid">
+                <div class="project-card">
+                    <div class="card-images">
+                        <img src="photos/solaris_mkii/engine_cross_section.png" alt="Engine cross section" style="border: none;">
+                        <img src="photos/solaris_mkii/SolarisRender.png" alt="Solaris MKII vehicle render" style="border: none; clip-path: inset(36% 0 36% 0);">
+                    </div>
+                    <h3>Engine cross-section</h3>
+                    <p>Cross-section of Solaris MkII with the full render below.</p>
                 </div>
                 <div class="project-card">
-                    <img src="photos/solaris_mkii/Zenith First Launch Video Final.gif" alt="Launch and team test video">
-                    <h3>Launch planning</h3>
-                    <p>Built the launch system readiness plan with test stand sequences, safety checks and campaign milestones.</p>
+                    <img src="photos/solaris_mkii/tech_top_bulkhead.png" alt="Top bulkhead">
+                    <h3>Top tank bulkhead</h3>
+                    <p>Upper tank bulkhead with 2:1 elliptical profile integrating active vent, capacitive fill sensor, pressure transducer and SPRV. Machined and designed by me.</p>
                 </div>
+            </div>
+            <h3>Main oxidiser valve</h3>
+            <p>The SRAD concentric pneumatic valve uses nitrous tap off to actuate an unequal area piston which is held closed by equal pressure until the pilot valve vents the pressure on the underside of the piston. The pilot valve is a three way piston valve driven by a DC motor via a lead screw, the profile of this system is incredibly compact and light for the flowrate and pressure it operates at.</p>
+            <div class="card-grid">
+                <div class="project-card">
+                    <img src="photos/solaris_mkii/annotated_valve_assembly.jpg" alt="valve assembly">
+                    <h3>Valve assembly</h3>
+                    <p>External view showing pilot valve, collar, main valve body, quick disconnect box, and combustion chamber forward closure.</p>
+                </div>
+                <div class="project-card">
+                    <img src="photos/solaris_mkii/valve_annotation.png" alt="Annotated valve assembly">
+                    <h3>Annotated valve assembly</h3>
+                    <p>Detailed annotation of the main valve assembly highlighting the concentric piston, sealing surfaces and pilot valve actuation.</p>
+                </div>
+                <div class="project-card">
+                    <img src="photos/solaris_mkii/qucik_disconnect.png" alt="Quick disconnect">
+                    <h3>Quick disconnect</h3>
+                    <p>Quick disconnect interface between the ground support fill line and the onboard tank.</p>
+                </div>
+            </div>
+            <h3>Fill system and capacitive fill sensor</h3>
+            <p>The nitrous fill sequence is managed through an automated control system that handles dumping, filling and vent operations. This state machine balances inputs from the capacitive fill sensor, onboard pressure transducer and active vent position feedback to fill the tank to a precise mass and pressure prior to launch and hold it there. This allows us to get predictable engine performance and thus get as close as possible to our target apogee.</p> 
+            <p>I personally developed the initial version of this state machine and design of the capacitive fill sensor in response to poor results from using a load cell on the launch rail.</p>
+            <div class="full-image-card">
+                <img src="photos/solaris_mkii/tech_auto_fill_fsm.png" alt="Auto fill state machine">
+                <h3>Fill control algorithm</h3>
+                <p>Alogrithm used to manage filling of Solaris MkII.</p>
             </div>
         </section>
         <section class="section">
-            <h2>Media gallery</h2>
-            <div class="media-gallery">
-                <figure>
-                    <img src="photos/solaris_mkii/Nozzle_MkII.png" alt="Solaris MKII nozzle concept">
-                    <figcaption>Nozzle concept development showing flow and geometry detail.</figcaption>
-                </figure>
-                <figure>
-                    <img src="photos/solaris_mkii/Solaris.png" alt="Solaris MKII project artwork">
-                    <figcaption>Project artwork used to present the launch vehicle architecture.</figcaption>
-                </figure>
-                <figure>
-                    <img src="photos/solaris_mkii/SolarisRender.png" alt="Solaris render">
-                    <figcaption>Render showing the hybrid vehicle configuration and aerodynamic shape.</figcaption>
-                </figure>
-                <figure>
-                    <img src="photos/solaris_mkii/TopBulkhead.png" alt="Top bulkhead detail">
-                    <figcaption>Top bulkhead detail used for structural and feed path integration.</figcaption>
-                </figure>
-                <figure>
-                    <img src="photos/solaris_mkii/Zenith_night.jpg" alt="Launch night">
-                    <figcaption>Launch night image representing the flight campaign atmosphere.</figcaption>
-                </figure>
-                <figure>
-                    <video class="project-video" controls src="photos/solaris_mkii/IREC_Launch.mp4"></video>
-                    <figcaption>Launch and competition summary video from the IREC campaign.</figcaption>
-                </figure>
-            </div>
-        </section>
-        <section class="section">
-            <h2>Project story</h2>
-            <div class="metric-grid">
-                <div class="metric-card">
-                    <h3>Analyze</h3>
-                    <p>Reviewed engine architecture from tank bulkhead to combustion chamber with annotations for valve assemblies and safety plumbing.</p>
-                </div>
-                <div class="metric-card">
-                    <h3>Develop</h3>
-                    <p>Designed the fill control system, capacitive tank sensor and active vent strategy for a launch-ready hybrid engine.</p>
-                </div>
-                <div class="metric-card">
-                    <h3>Operate</h3>
-                    <p>Documented the automated fill algorithm, quick-disconnect ignition sequence and launch hold logic used in campaign planning.</p>
-                </div>
-            </div>
-        </section>
-        <section class="section">
-            <h2>Current status</h2>
+            <h2>Hotfire test campaign</h2>
+            <p>This went through an extensive test campaign that spanned two years which resulted in significant improvements to the engine. Each hotfire was either used to test upgrades, test for repeatability or test bug fixes.</p>
+            <p>Early hotfires characterised the engine and allowed the determination of empirical constants for our simulations. The pilot valve system was implemented part way through the project, I was responsible for managing the members working on this project and both project system level and technical level input to its design.</p>
+            <p>The campaign culminated in a launch at IREC 2025, becoming the first Australian team to ever launch a hybrid at competition, setting other records along the way such as the first student hybrid L3 launch in Australia.</p>
             <ul class="highlight-list">
-                <li>Propulsion and systems architecture are under active development.</li>
-                <li>Launch readiness workflow is being improved through test planning and review.</li>
-                <li>More detailed documentation, diagrams and test data will be added as the program progresses.</li>
+                <li>Structural interfaces and the thrust path were validated through hydrostatic testing, confirming all loads stayed off the fluid lines.</li>
+                <li>Cold gas and hydrostatic campaigns verified valve functionality and structural integrity before each hotfire, building confidence incrementally.</li>
             </ul>
+            <div class="card-grid">
+                <div class="project-card">
+                    <img src="photos/solaris_mkii/MkII_hotfire.jpg" alt="Solaris MKII hot fire test">
+                    <h3>Hotfire test</h3>
+                    <p>Engine hotfire on the vertical test stand.</p>
+                </div>
+                <div class="project-card">
+                    <img src="photos/solaris_mkii/Tom_working_mkii.jpg" alt="Solaris MKII assembly work">
+                    <h3>Assembly and iteration</h3>
+                    <p>Myself setting Solaris MkII for its first hotfire test.</p>
+                </div>
+                <div class="project-card">
+                    <video controls>
+                        <source src="photos/solaris_mkii/IREC_Launch.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <h3>IREC 2025 launch</h3>
+                    <p>IREC 2025 launch for which I was the Propulsion Lead and Launch Operations Lead.</p>
+                </div>
+                <div class="project-card">
+                    <img src="photos/solaris_mkii/Zenith First Launch Video Final.gif" alt="Zenith launch GIF">
+                    <h3>First launch</h3>
+                    <p>First launch in Serpentine Australia, I was the Propulsion Lead at the time.</p>
+                </div>
+            </div>
+        </section>
+        <section class="section">
+            <h2>Other moments</h2>
+            <div class="card-grid">
+                <div class="project-card">
+                    <img src="photos/solaris_mkii/Zenith_night.jpg" alt="Zenith night launch">
+                    <h3>Project Zenith Photoshoot</h3>
+                    <p>Project Zenith featuring Solaris MkII with its minimum diameter oxidiser tank.</p>
+                </div>
+                <div class="project-card">
+                    <img src="photos/solaris_mkii/Zenith_flight.jpg" alt="Zenith in flight">
+                    <h3>Solaris MkII in Flight</h3>
+                    <p>The vehicle during its ascent to 10,000 ft apogee.</p>
+                </div>
+                <div class="project-card">
+                    <img src="photos/solaris_mkii/mk2_frr.JPG" alt="Flight Readiness Review">
+                    <h3>Flight Readiness Review</h3>
+                    <p>Myself presenting on Solaris MkII during the team's Flight Readiness Review.</p>
+                </div>
+            </div>
+        </section>
+        <section class="section">
+            <h2>Technical documents</h2>
+            <ul class="highlight-list">
+                <li><a href="photos/solaris_mkii/Progress%20report%202%20-%20Plumbing%20Diagram.pdf" target="_blank">IREC Progress Report 2: Plumbing Diagram</a></li>
+                <li><a href="photos/solaris_mkii/Progress%20report%202%20-%20Engine%20Annotation.pdf" target="_blank">IREC Progress Report 2: Engine Annotation</a></li>
+                <li><a href="photos/solaris_mkii/Progress%20report%202%20-%20Engine%20function.pdf" target="_blank">IREC Progress Report 2: Engine Function</a></li>
+                <li><a href="photos/solaris_mkii/Zenith%20Tech%20Report%20-%20Prop.pdf" target="_blank">Project Zenith Technical Report: Shortened to Propulsion Section</a></li>
+            </ul>
+            <div class="full-image-card">
+                <img src="photos/solaris_mkii/Solaris.png" alt="Solaris logo">
+                <h3>Project Solaris</h3>
+                <p>A project I spent over two years leading, striving to do something no student team has done in Australia.</p>
+            </div>
         </section>
     </main>
     <footer>
-        <p>&copy; 2026 Tom Russell • Aerospace Engineering Portfolio</p>
+        <p>2026 Tom Russell • Aerospace Engineering Portfolio</p>
     </footer>
 </body>
 </html>
