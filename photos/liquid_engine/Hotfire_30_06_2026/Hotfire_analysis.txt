@@ -1,0 +1,32 @@
+### **Section 1: Initial Predictions vs. Hotfire Data**
+
+**Context for Coding Agent:** Place this text alongside or above the first set of graphs showing the initial simulation.
+
+Prior to the hotfire on 30/06/2026, the initial simulation was built using conservative performance estimates. The model assumed a $C^*$ efficiency of 65% and a nozzle efficiency of 95%. Starting tank pressure was modeled at 35 bar, which aligned with expectations given the N2O bottle pressure was 43 bar prior to fill, allowing for expected cooling drops. The simulation also assumed a nominal Isopropanol (IPA) and Nitrous Oxide (N2O) fill level.
+
+Upon reviewing the raw thrust data from the hotfire, it was immediately clear that the engine significantly overperformed compared to these initial predictions. The actual thrust curve charted much higher than the simulated curve, generating a total measured impulse of roughly 2562 Ns, dwarfing the predicted 1895 Ns.
+
+### **Section 2: Data Fitting and Model Tuning**
+
+**Context for Coding Agent:** Place this text alongside or above the second set of graphs showing the fitted simulation.
+
+To accurately characterize the engine's true performance, the simulation parameters were reverse-engineered to fit the actual hotfire data.
+
+The tank pressure parameter was increased slightly to 36-37 bar, and the $C^*$ efficiency was adjusted upward to 80%. These modifications produced a simulated thrust curve that closely tracked the actual 30/06/2026 thrust data, capturing the initial peak and the gradual tail-off with high fidelity.
+
+### **Section 3: Key Performance Outcomes & Motor Classification**
+
+**Context for Coding Agent:** Format the following bullet points into a clean, modern HTML table or a grid of metric cards.
+
+The updated analysis revealed several major performance milestones for this engine architecture. Initially predicted to be a mid-range K-class motor (K357), the actual thrust data pushes the engine into a completely different classification.
+
+Based on the hotfire data and the tuned model, the key performance metrics are:
+
+* **Total Measured Impulse:** 2562.0 Ns
+* **Motor Classification:** L-Class (upgraded from K-Class)
+* **Specific Impulse ($I_{sp}$):** ~188 s (calculated via Impulse / Propellant Weight)
+* **Peak Thrust:** 674.0 N
+* **Average Thrust:** 407.0 N
+* **Total Propellant Mass:** 1.39 kg (1.15 kg N2O, 0.24 kg IPA)
+* **Average O/F Ratio:** 4.89
+* **Minimum Injector Stiffness:** 16%

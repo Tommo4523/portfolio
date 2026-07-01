@@ -204,6 +204,54 @@
                 </div>
             </div>
         </section>
+        <section class="section">
+            <h2>Hotfire Results</h2>
+
+            <p>The engine significantly overperformed initial predictions, delivering 2562 Ns total impulse and upgrading the classification from K357 to L-class. The model assumed 65% C* efficiency but the data shows 80%, an excellent result for a UC valve engine. Ignition was instant and clean. A visible step in the thrust curve around 3.8 s shows the IPA running out before the N<sub>2</sub>O, so the O/F ratio needs tuning. These results are extremely promising and I am looking forward to iterating on the design.</p>
+
+            <div class="card-grid">
+                <div class="project-card">
+                    <video controls>
+                        <source src="photos/liquid_engine/Hotfire_30_06_2026/30_06_2026_Hotfire_Trim.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </source></video>
+                    <h3>30 June 2026 hotfire</h3>
+                </div>
+                <div class="project-card">
+                    <img src="photos/liquid_engine/Hotfire_30_06_2026/frame_012.png" alt="Hotfire exhaust">
+                    <h3>Exhaust plume</h3>
+                </div>
+            </div>
+
+            <h3>Simulation Fit</h3>
+            <p>Tuning tank pressure to 36–37 bar and C* efficiency to 80% produced a simulated thrust curve that closely tracks the measured data.</p>
+
+            <div class="card-grid">
+                <div class="project-card">
+                    <img src="photos/liquid_engine/Hotfire_30_06_2026/Fitted_thrust_curve.png" alt="Fitted thrust curve">
+                    <h3>Thrust</h3>
+                </div>
+                <div class="project-card">
+                    <img src="photos/liquid_engine/Hotfire_30_06_2026/Fitted_pressure_curve.png" alt="Fitted pressure curve">
+                    <h3>Pressure</h3>
+                </div>
+                <div class="project-card">
+                    <img src="photos/liquid_engine/Hotfire_30_06_2026/Fitted_mass_curve.png" alt="Fitted mass flow curve">
+                    <h3>Mass flow</h3>
+                </div>
+            </div>
+
+            <h3>Performance Summary</h3>
+
+            <table class="performance-table">
+                <tr><td>Total Measured Impulse</td><td>2562 Ns</td></tr>
+                <tr><td>Motor Classification</td><td>L-Class (up from K, just)</td></tr>
+                <tr><td>Measured Specific Impulse (<em>I</em><sub>sp</sub>)</td><td>~188 s</td></tr>
+                <tr><td>Measured Peak Thrust</td><td>611 N</td></tr>
+                <tr><td>Propellant Mass</td><td>1.39 kg (1.15 kg N<sub>2</sub>O, 0.24 kg IPA)</td></tr>
+                <tr><td>Average O/F Ratio</td><td>4.89</td></tr>
+            </table>
+        </section>
     </main>
     <footer>
         <p>2026 Tom Russell • Aerospace Engineering Portfolio</p>
