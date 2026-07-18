@@ -54,7 +54,80 @@ header {
     border-bottom: 1px solid var(--border);
 }
 
+.homepage header {
+    background: #0a0f1a;
+    border-bottom: none;
+}
+
+.homepage header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('photos/Night_testing_photo_1.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.8;
+    z-index: 0;
+    pointer-events: none;
+}
+
+
+
+.homepage .brand h1 {
+    color: #ffffff;
+}
+
+.homepage .brand .eyebrow {
+    color: #a0aec0;
+}
+
+.homepage .hero-copy h3 {
+    color: #e2e8f0;
+}
+
+.homepage .hero-copy .eyebrow {
+    color: #cbd5e0;
+}
+
+.homepage nav a,
+.homepage .nav-dropdown > button {
+    color: #ffffff;
+}
+
+.homepage .home-button {
+    color: #ffffff;
+}
+
+.homepage .home-button:hover {
+    color: #cbd5e0;
+}
+
+.homepage .dropdown-menu a {
+    color: var(--text);
+}
+
+.homepage .dropdown-menu a:hover {
+    color: var(--accent);
+}
+
+
+.homepage nav a::after,
+.homepage .nav-dropdown > button::after {
+    background: #ffffff;
+}
+
+
+.homepage nav a:hover,
+.homepage .nav-dropdown > button:hover {
+    color: #cbd5e0;
+}
+
 .home-button:hover,
+
+
 .home-button:focus-visible {
     color: var(--text);
     text-decoration: none;
@@ -293,13 +366,14 @@ main {
 }
 
 .hero {
-    display: grid;
-    grid-template-columns: minmax(0, 1.4fr) minmax(280px, 1fr);
-    gap: 2.5rem;
-    align-items: center;
+    position: relative;
+    z-index: 1;
+    display: block;
     max-width: 1080px;
     margin: 0 auto;
 }
+
+
 
 .hero-banner {
     position: relative;
@@ -377,8 +451,9 @@ main {
 .hero-copy {
     display: grid;
     gap: 1.2rem;
-    max-width: 620px;
+    max-width: 820px;
 }
+
 
 .media-gallery {
     margin: 1.5rem 0 0;
@@ -647,7 +722,7 @@ body.js .visible {
 }
 
 .stats-grid {
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(1080px, 1fr));
 }
 
 .card-grid {
